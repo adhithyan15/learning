@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.name = "x86_simulator"
   spec.version = X86Simulator::VERSION
   spec.authors = ["Adhithya Rajasekaran"]
-  spec.email = ["adhithyan15+rubygems@gmail.com"]
+  spec.email = ["adhithyan15@gmail.com"]
 
   spec.summary = "A simulator that can run X86 instructions"
   spec.description = "This is mostly for educational purposes. This is not designed for speed"
