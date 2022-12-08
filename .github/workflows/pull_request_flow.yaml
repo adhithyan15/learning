@@ -1,8 +1,6 @@
 name: Build, Test And Release
 run-name: ${{ github.actor }} triggered the workflow
-on:
-  pull_request:
-    [main]
+on: [pull_request]
 jobs:
   build-test-release-ubuntu:
     runs-on: ubuntu-latest
