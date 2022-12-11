@@ -6,24 +6,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: ruby/setup-ruby@v1
         with:
-          node-version: '14'
-      - run: npm help
+          ruby-version: '3.0' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      - run: ruby code/scripts/build.rb
   build-test-release-windows:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: ruby/setup-ruby@v1
         with:
-          node-version: '14'
-      - run: npm help
+          ruby-version: '3.0' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      - run: ruby code/scripts/build.rb
   build-test-release-mac:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: ruby/setup-ruby@v1
         with:
-          node-version: '14'
-      - run: npm help
+          ruby-version: '3.0' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      - run: ruby code/scripts/build.rb
 
