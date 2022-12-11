@@ -86,4 +86,18 @@ class StackTest < Test::Unit::TestCase
     stack.push(10)
     assert_equal(stack.size, 2, 'size should return the current length of the stack')
   end
+
+  def test_is_full_should_return_false_for_unbounded_stack
+    stack = Stack.new
+    stack.push(5)
+    stack.push(10)
+    assert_equal(stack.is_full?, false, 'is_full? should return false for an unbounded stack')
+  end
+
+  def test_is_full_should_return_true_for_bounded_stack
+    stack = Stack.new(2)
+    stack.push(5)
+    stack.push(10)
+    assert_equal(stack.is_full?, true, 'is_full? should return true for a bounded stack')
+  end
 end

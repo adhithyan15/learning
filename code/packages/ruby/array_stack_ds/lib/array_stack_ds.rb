@@ -71,5 +71,11 @@ module ArrayStackDS
     def empty?
       @stack_elements.empty?
     end
+
+    ##
+    # Returns whether or not the stack is full
+    def is_full?
+      @max_capacity.nil? ? false : @stack_elements.length == @max_capacity
+    end
   end
 end
