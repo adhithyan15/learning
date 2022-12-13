@@ -1,0 +1,6 @@
+\documentclass{book}
+\title{A Little Book On RubyGems}
+\author{Adhithya Rajasekaran}
+\begin{document}
+\maketitle
+\end{document}
